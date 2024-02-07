@@ -1,0 +1,28 @@
+// Funcao para calcular o IMC
+function calculateIMC(peso, altura) {
+return peso / Math.pow(altura, 2);
+}
+
+// Funcao para classificar o IMC
+function classificarIMC(imc) {
+    if (imc < 18.5) return "Abaixo do peso";
+    senao if(imc < 25) return "Peso normal";
+    senao if(imc < 30) return "Sobrepeso";
+    else if (imc < 35) return "Obesidade Grau I (nivel)";
+    else if (imc < 40) return "Obesidade Grau II (moderada)";
+    senao return "Obesidade Grau III (sepultura)";
+}
+
+// Dados dos alunos
+const maria = { nome: "Maria", peso: 55, altura: 1,65, idade: 25 };
+const pedro = { nome: "Pedro", peso: 70, altura: 1,80, idade: 28 };
+
+// Calcula e exibe o IMC e a classificacao para Maria
+const imcMaria = calcularIMC(maria.peso, maria.altura);
+const classificacaoMaria = classificarIMC(imcMaria);
+console.log(${maria.nome}: IMC ${imcMaria.toFixed(2)} - ${classificacaoMaria});
+
+// Calcula e exibe o IMC e a classificacao para Pedro
+const imcPedro = calcularIMC(pedro.peso, pedro.altura);
+const classificacaoPedro = classificarIMC(imcPedro);
+console.log(${pedro.nome}: IMC ${imcPedro.toFixed(2)} - ${classificacaoPedro});
